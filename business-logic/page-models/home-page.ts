@@ -1,4 +1,4 @@
-import {type Locator, type Page} from '@playwright/test';
+import {type Page} from '@playwright/test';
 
 export class HomePage {
     readonly page: Page;
@@ -10,6 +10,4 @@ export class HomePage {
     async open() {
         await this.page.goto('https://www.peterfoldhazi.com/');
     }
-
-
 }
