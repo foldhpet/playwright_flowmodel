@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 import { HomePage } from '../business-logic/page-models/home-page';
-import { MenuBar } from '../business-logic/page-models/menu-bar';
+import { MenuBar } from '../business-logic/page-models/menu-bar-for-flow-model';
 
 test('Open home page and validate menu items - page object example', async ({page}) => {
     const homePage = new HomePage(page);
