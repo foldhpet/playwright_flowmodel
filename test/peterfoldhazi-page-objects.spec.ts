@@ -1,6 +1,6 @@
 import {test, expect} from '@playwright/test'
 import { HomePage } from '../business-logic/page-models/home-page';
-import { MenuBar } from '../business-logic/page-models/menu-bar-for-flow-model';
+import { MenuBarPageObject } from '../business-logic/page-models/menu-bar-for-page-object';
 
 test('Open home page and validate menu items - page object example', async ({page}) => {
     const homePage = new HomePage(page);
@@ -8,7 +8,7 @@ test('Open home page and validate menu items - page object example', async ({pag
     await expect(page).toHaveTitle('Péter Földházi Jr. - Test Automation');
     await expect(page).toHaveURL('https://www.peterfoldhazi.com/');
 
-    const menuBar = new MenuBar(page);
+    const menuBar = new MenuBarPageObject(page);
     await menuBar.openAboutPage();
     await expect(page).toHaveTitle('About | Péter Földházi Jr.');
     await expect(page).toHaveURL('https://www.peterfoldhazi.com/about');

@@ -1,6 +1,6 @@
 import {type Locator, type Page} from '@playwright/test';
 
-export class MenuBar {
+export class MenuBarFlowModelExample {
     readonly page: Page;
     aboutPageLocator: Locator;
     conferencesPageLocator: Locator;
@@ -17,29 +17,5 @@ export class MenuBar {
         this.blogPageLocator = page.locator('text=Blog');
         this.contactPageLocator = page.locator('text=Contact');
         this.homePageLocator = page.locator('text=Home');
-    }
-
-    async openAboutPage() {
-        await this.aboutPageLocator.click();
-    }
-
-    async openConferencesPage() {
-        await this.conferencesPageLocator.click();
-    }
-
-    async openArticlesPage() {
-        await this.articlesPageLocator.click();
-    }
-
-    async openBlogPage() {
-        await this.blogPageLocator.click();
-    }
-
-    async openContactPage() {
-        await this.contactPageLocator.click();
-    }
-
-    async openHomePage() {
-        await this.homePageLocator.click();
     }
 }

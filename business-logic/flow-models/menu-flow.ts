@@ -1,15 +1,15 @@
 import {type Page, expect} from '@playwright/test';
-import { MenuBar } from "../page-models/menu-bar";
+import { MenuBarFlowModelExample } from "../page-models/menu-bar-for-flow-model";
 
 export class MenuFlow {
     readonly page: Page;
-    menuBar: MenuBar
+    menuBar: MenuBarFlowModelExample
 
     constructor() {
     }
 
     async openAboutPage(page: Page) {
-        this.menuBar = new MenuBar(page);
+        this.menuBar = new MenuBarFlowModelExample(page);
         await this.menuBar.aboutPageLocator.click();
         await expect(page).toHaveTitle('About | Péter Földházi Jr.');
         await expect(page).toHaveURL('https://www.peterfoldhazi.com/about');
@@ -17,7 +17,7 @@ export class MenuFlow {
     }
 
     async openConferencesPage(page: Page) {
-        this.menuBar = new MenuBar(page);
+        this.menuBar = new MenuBarFlowModelExample(page);
         await this.menuBar.conferencesPageLocator.click();
         await expect(page).toHaveTitle('Conferences | Péter Földházi Jr.');
         await expect(page).toHaveURL('https://www.peterfoldhazi.com/conferences');
@@ -25,7 +25,7 @@ export class MenuFlow {
     }
 
     async openArticlesPage(page: Page) {
-        this.menuBar = new MenuBar(page);
+        this.menuBar = new MenuBarFlowModelExample(page);
         await this.menuBar.articlesPageLocator.click();
         await expect(page).toHaveTitle('Articles | Péter Földházi Jr.');
         await expect(page).toHaveURL('https://www.peterfoldhazi.com/articles');
@@ -33,7 +33,7 @@ export class MenuFlow {
     }
 
     async openBlogPage(page: Page) {
-        this.menuBar = new MenuBar(page);
+        this.menuBar = new MenuBarFlowModelExample(page);
         await this.menuBar.blogPageLocator.click();
         await expect(page).toHaveTitle('Blog | Péter Földházi Jr.');
         await expect(page).toHaveURL('https://www.peterfoldhazi.com/blog');
@@ -41,7 +41,7 @@ export class MenuFlow {
     }
 
     async openContactPage(page: Page) {
-        this.menuBar = new MenuBar(page);
+        this.menuBar = new MenuBarFlowModelExample(page);
         await this.menuBar.contactPageLocator.click();
         await expect(page).toHaveTitle('Contact | Péter Földházi Jr.');
         await expect(page).toHaveURL('https://www.peterfoldhazi.com/contact');
@@ -49,7 +49,7 @@ export class MenuFlow {
     }
 
     async openHomePage(page: Page) {
-        this.menuBar = new MenuBar(page);
+        this.menuBar = new MenuBarFlowModelExample(page);
         await this.menuBar.homePageLocator.click();
         await expect(page).toHaveTitle('Péter Földházi Jr. - Test Automation');
         await expect(page).toHaveURL('https://www.peterfoldhazi.com/');
